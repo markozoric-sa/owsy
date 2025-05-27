@@ -1304,24 +1304,120 @@
                     ]
                 }
             },
-            {
+             {
                 "insured_locations": {
                     "type": "collection",
-                    "label": "Location(s) Insured",
+                    "label": "Insured Location(s)",
                     "rows": [
                         {
-                            "address": {
+                            "location_number": {
                                 "type": "text",
-                                "label": "Address",
+                                "label": "Location Number",
+                                "width": 3,
+                                "required": true,
+                                "help": null,
+                                "default": null,
+                                "decision": null
+                            }
+                        },
+                        {
+                            "street": {
+                                "type": "text",
+                                "label": "Street",
                                 "width": 6,
                                 "required": true,
                                 "help": null,
                                 "default": null,
                                 "decision": null
                             },
+                            "address_line_2": {
+                                "type": "text",
+                                "label": "Address Line 2",
+                                "width": 6,
+                                "required": false,
+                                "help": null,
+                                "default": null,
+                                "decision": null
+                            }
+                        },
+                        {
                             "city": {
                                 "type": "text",
                                 "label": "City",
+                                "width": 6,
+                                "required": true,
+                                "help": null,
+                                "default": null,
+                                "decision": null
+                            },
+                            "state": {
+                                "type": "choice",
+                                "label": "State",
+                                "options": {
+                                    "al": "Alabama",
+                                    "ak": "Alaska",
+                                    "az": "Arizona",
+                                    "ar": "Arkansas",
+                                    "ca": "California",
+                                    "co": "Colorado",
+                                    "ct": "Connecticut",
+                                    "de": "Delaware",
+                                    "fl": "Florida",
+                                    "ga": "Georgia",
+                                    "hi": "Hawaii",
+                                    "id": "Idaho",
+                                    "il": "Illinois",
+                                    "in": "Indiana",
+                                    "ia": "Iowa",
+                                    "ks": "Kansas",
+                                    "ky": "Kentucky",
+                                    "la": "Louisiana",
+                                    "me": "Maine",
+                                    "md": "Maryland",
+                                    "ma": "Massachusetts",
+                                    "mi": "Michigan",
+                                    "mn": "Minnesota",
+                                    "ms": "Mississippi",
+                                    "mo": "Missouri",
+                                    "mt": "Montana",
+                                    "ne": "Nebraska",
+                                    "nv": "Nevada",
+                                    "nh": "New Hampshire",
+                                    "nj": "New Jersey",
+                                    "nm": "New Mexico",
+                                    "ny": "New York",
+                                    "nc": "North Carolina",
+                                    "nd": "North Dakota",
+                                    "oh": "Ohio",
+                                    "ok": "Oklahoma",
+                                    "or": "Oregon",
+                                    "pa": "Pennsylvania",
+                                    "ri": "Rhode Island",
+                                    "sc": "South Carolina",
+                                    "sd": "South Dakota",
+                                    "tn": "Tennessee",
+                                    "tx": "Texas",
+                                    "ut": "Utah",
+                                    "vt": "Vermont",
+                                    "va": "Virginia",
+                                    "wa": "Washington",
+                                    "wv": "West Virginia",
+                                    "wi": "Wisconsin",
+                                    "wy": "Wyoming"
+                                },
+                                "width": 6,
+                                "required": false,
+                                "expanded": false,
+                                "multiple": false,
+                                "help": null,
+                                "default": null,
+                                "decision": null
+                            }
+                        },
+                        {
+                            "zip": {
+                                "type": "text",
+                                "label": "ZIP",
                                 "width": 3,
                                 "required": true,
                                 "help": null,
@@ -1332,37 +1428,6 @@
                                 "type": "text",
                                 "label": "County",
                                 "width": 3,
-                                "required": false,
-                                "help": null,
-                                "default": null,
-                                "decision": null
-                            }
-                        },
-                        {
-                            "state": {
-                                "type": "text",
-                                "label": "State",
-                                "width": 6,
-                                "required": true,
-                                "help": null,
-                                "default": null,
-                                "decision": null
-                            },
-                            "zip": {
-                                "type": "text",
-                                "label": "ZIP Code",
-                                "width": 6,
-                                "required": true,
-                                "help": null,
-                                "default": null,
-                                "decision": null
-                            }
-                        },
-                        {
-                            "location_number": {
-                                "type": "text",
-                                "label": "Location Number",
-                                "width": 6,
                                 "required": false,
                                 "help": null,
                                 "default": null,
@@ -1636,16 +1701,7 @@
                                                         "default": null,
                                                         "decision": null
                                                     }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "retail_miner_specific": {
-                                            "type": "section",
-                                            "label": "Retail Miner - Specific CGL Coverage Questions:",
-                                            "width": 12,
-                                            "rows": [
+                                                },
                                                 {
                                                     "retail_miner_specific_question1": {
                                                         "type": "choice",
